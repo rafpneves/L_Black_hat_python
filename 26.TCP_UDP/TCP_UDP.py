@@ -19,8 +19,7 @@ target_port = 80
 target_host2 = "127.0.0.1"
 target_port2 = 9997
 
-# [clear] Limpa historico anterior
-def Clear():
+def S():
     print("")
 
 def logo(): #CrypR
