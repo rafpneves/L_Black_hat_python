@@ -19,11 +19,11 @@ class Server (paramiko.ServerInterface):
             return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
         
     def check_auth_password(self, username, password):
-        if (username == 'tim') and (password == 'sekret'):
+        if (username == 'root') and (password == '000'):
             return paramiko.AUTH_SUCCESSFUL
 if __name__ == '__main__':
     server = '192.168.1.12'
-    ssh_port = 2222
+    ssh_port = 22
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     chan = bhSession.accept(20)
 
     if chan is None:
-        print('*** No channel.')
+        print('*** Sem Canal.')
         sys.exit(1)
 
     print('[+] Autenticado!')

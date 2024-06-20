@@ -43,7 +43,7 @@ def info():
         # Iniciando o cliente SSH
         print("")
         print(f"{B}{RED}[{B}{WHITE}*{B}{RED}]{B}{GREEN} Iniciado SSH Cliente{F}")
-        with open('/home/kalilinux/Documents/L_Black_hat_python/43.SSH_Paramiko/SSH_rcmd.py', 'r') as file:
+        with open('SSH_rcmd.py', 'r') as file:
             SSH_rcmd = file.read()
             exec(SSH_rcmd)
         print("[*] Teste de ssh_rcmd")
@@ -51,7 +51,7 @@ def info():
         # Iniciando o Servidor SSH
         print("")
         print(f"{B}{RED}[{B}{WHITE}*{B}{RED}]{B}{GREEN} Iniciado SSH Servidor{F}")
-        with open('/home/kalilinux/Documents/L_Black_hat_python/43.SSH_Paramiko/SSH_server.py', 'r') as file:
+        with open('SSH_server.py', 'r') as file:
             SSH_server = file.read()
             exec(SSH_server)
         print("[*] Teste de SSH_server")
