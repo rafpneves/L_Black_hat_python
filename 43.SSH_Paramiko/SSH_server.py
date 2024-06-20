@@ -1,5 +1,5 @@
 import os
-import paramiko
+import paramiko # type: ignore
 import socket
 import sys
 import threading
@@ -23,7 +23,7 @@ class Server (paramiko.ServerInterface):
             return paramiko.AUTH_SUCCESSFUL
         
 if __name__ == '__main__':
-    server = '192.168.1.13'
+    server = '192.168.1.12'
     ssh_port = 22
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
