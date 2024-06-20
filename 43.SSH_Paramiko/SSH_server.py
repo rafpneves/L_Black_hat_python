@@ -16,13 +16,14 @@ class Server (paramiko.ServerInterface):
     def check_channel_request(self, kind, chanid):
         if kind == 'session':
             return paramiko.OPEN_SUCCEEDED
-            return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
+        return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
         
     def check_auth_password(self, username, password):
         if (username == 'root') and (password == '000'):
             return paramiko.AUTH_SUCCESSFUL
+        
 if __name__ == '__main__':
-    server = '192.168.1.12'
+    server = '192.168.1.13'
     ssh_port = 22
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
